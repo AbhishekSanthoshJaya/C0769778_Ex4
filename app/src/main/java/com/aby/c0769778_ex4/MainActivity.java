@@ -76,6 +76,12 @@ private Button btnClear;
 private Button btnSubmit;
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        clearAll();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,41 +181,7 @@ private Button btnSubmit;
                 btnClear.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //Clearing Spinners
-                        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(MainActivity.this,
-                                R.array.title_array, android.R.layout.simple_spinner_item);
-                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        spnTitle.setAdapter(adapter);
-
-                        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(MainActivity.this,
-                                R.array.designation_array, android.R.layout.simple_spinner_item);
-                        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        spnDesignation.setAdapter(adapter2);
-
-                        //Clearing EditText fields
-                        DisplayDate.setText("");
-                        edtIssueDetails.setText("");
-                        edtFirstName.getEditText().setText("");
-                        edtLastName.getEditText().setText("");
-                        edtStreetNo.getEditText().setText("");
-                        edtStreetName.getEditText().setText("");
-                        edtProvince.getEditText().setText("");
-                        edtPostalCode.getEditText().setText("");
-                        edtCountry.getEditText().setText("");
-                        edtNumber.getEditText().setText("");
-
-                        //Clearing Checkbox, Rating bar, Radiobuttons
-                        chkNetwork.setChecked(false);
-                        chkInstallation.setChecked(false);
-                        chkPerformance.setChecked(false);
-                        chkOther.setChecked(false);
-
-                        rdBtnFulltime.setChecked(false);
-                        rdBtnParttime.setChecked(false);
-                        rdBtnTrainee.setChecked(false);
-
-                        ratingBarSevere.setRating(0F);
-
+                        clearAll();
                     }
                 });
 
@@ -260,6 +232,49 @@ private Button btnSubmit;
             }
     private void errorToast(){
         Toast.makeText(MainActivity.this, "Please fill the mandatory fields", Toast.LENGTH_LONG).show();
+    }
+
+    private void clearAll(){
+        //Clearing Spinners
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(MainActivity.this,
+                R.array.title_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnTitle.setAdapter(adapter);
+
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(MainActivity.this,
+                R.array.designation_array, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnDesignation.setAdapter(adapter2);
+
+        //Clearing EditText fields
+        DisplayDate.setText("");
+        edtIssueDetails.setText("");
+        edtFirstName.getEditText().setText("");
+        edtLastName.getEditText().setText("");
+        edtStreetNo.getEditText().setText("");
+        edtStreetName.getEditText().setText("");
+        edtProvince.getEditText().setText("");
+        edtPostalCode.getEditText().setText("");
+        edtCountry.getEditText().setText("");
+        edtNumber.getEditText().setText("");
+
+        //Clearing Previous Errors
+        edtFirstName.setError(null);
+        edtLastName.setError(null);
+        edtIssueDetails.setError(null);
+        edtNumber.setError(null);
+
+        //Clearing Checkbox, Rating bar, Radiobuttons
+        chkNetwork.setChecked(false);
+        chkInstallation.setChecked(false);
+        chkPerformance.setChecked(false);
+        chkOther.setChecked(false);
+
+        rdBtnFulltime.setChecked(false);
+        rdBtnParttime.setChecked(false);
+        rdBtnTrainee.setChecked(false);
+
+        ratingBarSevere.setRating(0F);
     }
         }
 
