@@ -6,9 +6,12 @@ import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Scroller;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -19,6 +22,7 @@ private Spinner spnTitle;
 private Spinner spnDesignation;
 private TextView DisplayDate;
 private DatePickerDialog.OnDateSetListener mDateSetListener;
+private EditText edtIssueDetails;
 
 
     @Override
@@ -28,6 +32,12 @@ private DatePickerDialog.OnDateSetListener mDateSetListener;
         spnTitle = findViewById(R.id.spnTitle);
         spnDesignation = findViewById(R.id.spnDesignation);
         DisplayDate = findViewById(R.id.txtDate);
+        edtIssueDetails = findViewById(R.id.edtIssueDetails);
+
+        edtIssueDetails.setScroller(new Scroller(MainActivity.this));
+        edtIssueDetails.setMaxLines(3);
+        edtIssueDetails.setMovementMethod(new ScrollingMovementMethod());
+
         DisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +60,6 @@ private DatePickerDialog.OnDateSetListener mDateSetListener;
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
-                //Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
                 String date = month + "/" + day + "/" + year;
                 DisplayDate.setText(date);
             }
