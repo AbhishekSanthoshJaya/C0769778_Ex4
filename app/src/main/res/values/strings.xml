@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">C0769778_Ex4</string>
     <string-array name="title_array">
-        <item>Mr.</item>
-        <item>Mrs.</item>
-        <item>Ms.</item>
-        <item>Dr.</item>
+        <item>Mr</item>
+        <item>Mrs</item>
+        <item>Ms</item>
+        <item>Dr</item>
         <item>Sir</item>
-        <item>Lord</item>
+        <item>Lord Snow</item>
     </string-array>
     <string-array name="designation_array">
         <item>Software Engineer</item>
         <item>Senior Engineer</item>
         <item>Project Manager</item>
-        <item>Support</item>
-        <item>Design</item>
-        <item>Marketing</item>
+        <item>Support Staff</item>
+        <item>Designer</item>
+        <item>Marketing Lead</item>
     </string-array>
 </resources>

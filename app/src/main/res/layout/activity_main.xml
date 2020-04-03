@@ -82,6 +82,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtFirstNameText"
                 android:layout_width="195dp"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -102,6 +103,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLastNameText"
                 android:layout_width="195dp"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -205,6 +207,7 @@
             app:layout_constraintTop_toBottomOf="@+id/spnDesignation">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtStreetNoText"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content" />
 
@@ -225,6 +228,7 @@
             app:layout_constraintTop_toBottomOf="@+id/spnDesignation">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtStreetNameText"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content" />
 
@@ -245,6 +249,7 @@
             app:layout_constraintTop_toBottomOf="@+id/edtStreetNo">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtProvinceText"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -265,6 +270,7 @@
             app:layout_constraintTop_toBottomOf="@+id/edtStreetName">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCountryText"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -285,6 +291,7 @@
             app:layout_constraintTop_toBottomOf="@+id/edtProvince">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPostalCodeText"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -319,6 +326,7 @@
             app:layout_constraintTop_toBottomOf="@+id/edtPostalCode">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNumberText"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
