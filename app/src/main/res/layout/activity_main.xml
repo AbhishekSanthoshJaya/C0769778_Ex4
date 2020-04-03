@@ -31,6 +31,7 @@
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Customer Complaint Form"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
@@ -269,7 +270,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editText7"
+            android:id="@+id/edtPostalCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -315,7 +316,7 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/editText7">
+            app:layout_constraintTop_toBottomOf="@+id/edtPostalCode">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="160dp"
@@ -446,6 +447,8 @@
             app:layout_constraintTop_toBottomOf="@+id/edtIssueDetails" />
 
         <RatingBar
+            android:progressTint="@color/rating_severe"
+            android:theme="@style/RatingBar"
             android:id="@+id/ratingBarSevere"
             style="?android:attr/ratingBarStyleIndicator"
             android:layout_width="wrap_content"
@@ -453,9 +456,45 @@
             android:layout_marginStart="127dp"
             android:layout_marginTop="17dp"
             android:layout_marginEnd="127dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize=".5"
+            android:isIndicator="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="173dp"
+            android:text="SUBMIT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnClear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBarSevere" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="173dp"
+            android:backgroundTint="#FB3E3E"
+            android:shadowColor="#FF0000"
+            android:text="CLEAR FORM"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSubmit"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBarSevere"
+            app:strokeColor="#FF0000" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
