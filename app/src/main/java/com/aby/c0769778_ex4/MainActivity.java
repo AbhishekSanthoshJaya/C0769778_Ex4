@@ -40,7 +40,7 @@ private TextInputLayout edtFirstName;
 private TextInputEditText edtFirstNameText;
 
 private TextInputLayout edtLastName;
-private TextInputEditText getEdtLastNameText;
+private TextInputEditText edtLastNameText;
 
 private TextInputLayout edtStreetNo;
 private TextInputEditText edtStreetNoText;
@@ -105,7 +105,7 @@ private Button btnSubmit;
         edtNumber = findViewById(R.id.edtNumber);
 
         edtFirstNameText = findViewById(R.id.edtFirstNameText);
-        getEdtLastNameText = findViewById(R.id.edtLastNameText);
+        edtLastNameText = findViewById(R.id.edtLastNameText);
         edtStreetNoText = findViewById(R.id.edtStreetNoText);
         edtStreetNameText = findViewById(R.id.edtStreetNameText);
         edtProvinceText = findViewById(R.id.edtStreetNameText);
@@ -121,9 +121,22 @@ private Button btnSubmit;
             @Override
             public void onClick(View v) {
                 if (edtFirstNameText.getText().toString().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please enter first name", Toast.LENGTH_SHORT).show();
+                    errorToast();
                     edtFirstName.setError("Enter first name");
-                } else {
+                }
+                if(edtLastNameText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtLastName.setError("Enter last name");
+                }
+                if(edtNumberText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtNumber.setError("Enter number");
+                }
+                if(edtIssueDetails.getText().toString().isEmpty()){
+                    errorToast();
+                    edtIssueDetails.setError("Enter your issue");
+                }
+                else {
                     new MaterialAlertDialogBuilder(MainActivity.this)
                             .setTitle("CONFIRM COMPLAINT")
                             .setMessage("Would you like to register this complaint?")
@@ -245,6 +258,9 @@ private Button btnSubmit;
                 adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spnDesignation.setAdapter(adapter2);
             }
+    private void errorToast(){
+        Toast.makeText(MainActivity.this, "Please fill the mandatory fields", Toast.LENGTH_LONG).show();
+    }
         }
 
 
