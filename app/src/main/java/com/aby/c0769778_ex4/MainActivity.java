@@ -17,8 +17,10 @@ import android.view.Display;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Scroller;
 import android.widget.Spinner;
@@ -44,7 +46,15 @@ private TextInputLayout  edtCountry;
 private TextInputLayout  edtNumber;
 private EditText  edtIssueDetails;
 
+private CheckBox chkNetwork;
+private CheckBox chkPerformance;
+private CheckBox chkOther;
+private CheckBox chkInstallation;
 private DatePickerDialog.OnDateSetListener mDateSetListener;
+
+private RadioButton rdBtnTrainee;
+private RadioButton rdBtnParttime;
+private RadioButton rdBtnFulltime;
 
 private RatingBar ratingBarSevere;
 private Button btnClear;
@@ -57,6 +67,15 @@ private Button btnSubmit;
         setContentView(R.layout.activity_main);
         spnTitle = findViewById(R.id.spnTitle);
         spnDesignation = findViewById(R.id.spnDesignation);
+
+        chkNetwork = findViewById(R.id.chkNetwork);
+        chkInstallation = findViewById(R.id.chkInstallation);
+        chkOther = findViewById(R.id.chkOther);
+        chkPerformance = findViewById(R.id.chkPerformance);
+
+        rdBtnFulltime = findViewById(R.id.rdBtnFulltime);
+        rdBtnParttime = findViewById(R.id.rdBtnParttime);
+        rdBtnTrainee = findViewById(R.id.rdBtnTrainee);
 
         DisplayDate = findViewById(R.id.txtDate);
         edtIssueDetails = findViewById(R.id.edtIssueDetails);
@@ -98,6 +117,18 @@ private Button btnSubmit;
                 edtPostalCode.getEditText().setText("");
                 edtCountry.getEditText().setText("");
                 edtNumber.getEditText().setText("");
+
+                //Clearing Checkbox, Rating bar, Radiobuttons
+                chkNetwork.setChecked(false);
+                chkInstallation.setChecked(false);
+                chkPerformance.setChecked(false);
+                chkOther.setChecked(false);
+
+                rdBtnFulltime.setChecked(false);
+                rdBtnParttime.setChecked(false);
+                rdBtnTrainee.setChecked(false);
+
+                ratingBarSevere.setRating(0F);
             }
         });
 

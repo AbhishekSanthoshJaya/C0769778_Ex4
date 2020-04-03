@@ -12,7 +12,7 @@
         tools:context=".MainActivity">
 
         <CheckBox
-            android:id="@+id/chkInstallation3"
+            android:id="@+id/chkInstallation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
@@ -370,7 +370,7 @@
             android:text="Network"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@+id/chkInstallation3"
+            app:layout_constraintEnd_toStartOf="@+id/chkInstallation"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/txtDate" />
 
@@ -386,7 +386,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/chkPerformance"
-            app:layout_constraintTop_toBottomOf="@+id/chkInstallation3" />
+            app:layout_constraintTop_toBottomOf="@+id/chkInstallation" />
 
         <CheckBox
             android:id="@+id/chkPerformance"
@@ -469,10 +469,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="79dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="50dp"
             android:layout_marginBottom="173dp"
             android:text="SUBMIT"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnClear"
             app:layout_constraintStart_toStartOf="parent"
@@ -483,13 +484,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="96dp"
             android:layout_marginBottom="173dp"
             android:backgroundTint="#FB3E3E"
             android:shadowColor="#FF0000"
             android:text="CLEAR FORM"
             android:textColor="#FFFFFF"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnSubmit"
