@@ -1,6 +1,7 @@
 package com.aby.c0769778_ex4;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 
 import android.app.DatePickerDialog;
@@ -149,7 +150,12 @@ private Button btnSubmit;
                             .setPositiveButton("PROCEED", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
+                                    String designation = spnDesignation.getSelectedItem().toString();
+                                    Complaints complaintDetails = new Complaints(edtFirstNameText.getText().toString(), edtLastNameText.getText().toString(), edtIssueDetails.getText().toString(), designation, DisplayDate.getText().toString());
                                     Intent complaintIntent = new Intent(MainActivity.this, ComplaintDetails.class);
+                                    Bundle bundle = new Bundle();
+                                    bundle.putSerializable("complaintKey",complaintDetails);
+                                    complaintIntent.putExtras(bundle);
                                     startActivity(complaintIntent);
                                 }
                             })
@@ -186,9 +192,9 @@ private Button btnSubmit;
                 });
 
                 LayerDrawable layerDrawable = (LayerDrawable) ratingBarSevere.getProgressDrawable();
-                DrawableCompat.setTint(DrawableCompat.wrap(layerDrawable.getDrawable(0)), Color.RED);
-                DrawableCompat.setTint(DrawableCompat.wrap(layerDrawable.getDrawable(1)), Color.GREEN);
-                DrawableCompat.setTint(DrawableCompat.wrap(layerDrawable.getDrawable(2)), Color.BLUE);
+        DrawableCompat.setTint(DrawableCompat.wrap(layerDrawable.getDrawable(1)), ContextCompat.getColor(MainActivity.this, R.color.rating_mild));
+        DrawableCompat.setTint(DrawableCompat.wrap(layerDrawable.getDrawable(2)), ContextCompat.getColor(MainActivity.this, R.color.rating_severe));
+        DrawableCompat.setTint(DrawableCompat.wrap(layerDrawable.getDrawable(0)), ContextCompat.getColor(MainActivity.this, R.color.colorPrimary));
 
                 edtIssueDetails.setScroller(new Scroller(MainActivity.this));
                 edtIssueDetails.setMaxLines(3);
