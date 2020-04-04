@@ -44,7 +44,8 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
             //txtCompDate.setText(cd.getIssueDate());
             txtCompDesignation.setText(cd.getDesignation());
             txtCompNumber.setText(cd.getNumber());
-            txtCompPostal.setText(cd.getPostalCode());
+            txtCompPostal.setText(cd.getAddress().toString());
+
         }
     }
 }

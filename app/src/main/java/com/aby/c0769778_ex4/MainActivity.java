@@ -179,7 +179,8 @@ private Button btnSubmit;
                                             designation,
                                             DisplayDate.getText().toString(),
                                             edtNumberText.getText().toString(),
-                                            edtPostalCodeText.getText().toString());
+                                            edtPostalCodeText.getText().toString(),
+                                            getAddress());
                                     Intent complaintIntent = new Intent(MainActivity.this, ComplaintDetailsActivity.class);
                                     Bundle bundle = new Bundle();
                                     bundle.putSerializable("complaintKey",complaintDetails);
@@ -348,6 +349,15 @@ private Button btnSubmit;
             issueList.add("Other");
         }
         return issueList;
+    }
+
+    private ArrayList<String> getAddress(){
+        ArrayList<String> address = new ArrayList<>();
+        address.add(edtStreetNoText.getText().toString());
+        address.add(edtStreetNameText.getText().toString());
+        address.add(edtProvinceText.getText().toString());
+        address.add(edtPostalCodeText.getText().toString());
+        return address;
     }
 }
 

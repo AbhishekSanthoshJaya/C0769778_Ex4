@@ -3,6 +3,7 @@ package com.aby.c0769778_ex4.model;
 import android.text.Editable;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Complaints implements Serializable {
@@ -14,7 +15,9 @@ public class Complaints implements Serializable {
     private String designation;
     private String issueDate;
     private String number;
+    private ArrayList address;
     private String postalCode;
+
 
 
     public Complaints(String firstName,
@@ -23,14 +26,20 @@ public class Complaints implements Serializable {
                       String designation,
                       String issueDate,
                       String number,
-                      String postalCode){
+                      String postalCode,
+    ArrayList address){
         this.firstName = firstName;
         this.lastName = lastName;
         this.allIssues = allIssues;
         this.designation = designation;
         this.issueDate = issueDate;
         this.number = number;
+        this.address = address;
         this.postalCode = postalCode;
+    }
+
+    public ArrayList getAddress() {
+        return address;
     }
 
     public ArrayList getAllIssues() {
