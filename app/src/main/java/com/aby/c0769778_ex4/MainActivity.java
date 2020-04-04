@@ -8,6 +8,7 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
@@ -178,6 +179,7 @@ private Button btnSubmit;
                         Toast.makeText(MainActivity.this,
                                 "Rating changed, current severity " + ratingBar.getRating(),
                                 Toast.LENGTH_SHORT).show();
+                        setColors(ratingBar.getRating());
                     }
                 });
 
@@ -283,6 +285,27 @@ private Button btnSubmit;
 
         ratingBarSevere.setRating(0F);
     }
+    private void setColors(float rating) {
+        LayerDrawable stars = (LayerDrawable)ratingBarSevere.getProgressDrawable();
+        switch (Math.round(rating)) {
+            case 1:
+                stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.very_low), PorterDuff.Mode.SRC_ATOP);
+                break;
+            case 2:
+                stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.low), PorterDuff.Mode.SRC_ATOP);
+                break;
+            case 3:
+                stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.medium), PorterDuff.Mode.SRC_ATOP);
+                break;
+            case 4:
+                stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.high), PorterDuff.Mode.SRC_ATOP);
+                break;
+            case 5:
+                stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.critical), PorterDuff.Mode.SRC_ATOP);
+                break;
         }
+    }
+}
+
 
 
