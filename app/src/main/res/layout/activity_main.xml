@@ -67,6 +67,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edtFirstName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -81,12 +82,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtFirstNameText"
-                android:layout_width="195dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edtLastName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -102,7 +104,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtLastNameText"
-                android:layout_width="195dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -191,6 +193,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edtStreetNo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -212,6 +215,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edtStreetName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -233,6 +237,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edtProvince"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -253,6 +258,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edtCountry"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -274,6 +280,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edtPostalCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -300,19 +307,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="570dp"
             android:layout_marginEnd="290dp"
-            android:layout_marginBottom="34dp"
             android:text="Number"
             android:textColor="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/textView7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edtNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="37dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="130dp"
             android:ems="10"
@@ -324,7 +330,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtNumberText"
-                android:layout_width="160dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -333,15 +339,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="628dp"
             android:layout_marginEnd="290dp"
-            android:layout_marginBottom="35dp"
             android:text="Issue Date"
             android:textColor="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/textView10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtDate"
@@ -361,8 +365,8 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="280dp"
             android:text="Issue Type"
             android:textColor="@color/colorPrimary"
@@ -374,7 +378,7 @@
             android:id="@+id/chkNetwork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="21dp"
             android:layout_marginTop="20dp"
             android:text="Network"
             android:textColor="@color/colorPrimary"
@@ -386,7 +390,7 @@
             android:id="@+id/chkOther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="240dp"
+            android:layout_marginStart="235dp"
             android:layout_marginTop="13dp"
             android:text="Other"
             android:textColor="@color/colorPrimary"
@@ -399,7 +403,7 @@
             android:id="@+id/chkPerformance"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_marginStart="130dp"
+            android:layout_marginStart="114dp"
             android:layout_marginTop="13dp"
             android:layout_marginEnd="18dp"
             android:text="Performance"

@@ -130,15 +130,15 @@ private Button btnSubmit;
             public void onClick(View v) {
                 if (edtFirstNameText.getText().toString().isEmpty()) {
                     errorToast();
-                    edtFirstName.setError("Enter first name");
+                    edtFirstNameText.setError("Enter first name");
                 }
                 if(edtLastNameText.getText().toString().isEmpty()){
                     errorToast();
-                    edtLastName.setError("Enter last name");
+                    edtLastNameText.setError("Enter last name");
                 }
                 if(edtNumberText.getText().toString().isEmpty()){
                     errorToast();
-                    edtNumber.setError("Enter number");
+                    edtNumberText.setError("Enter number");
                 }
                 if(edtIssueDetails.getText().toString().isEmpty()){
                     errorToast();
@@ -146,24 +146,24 @@ private Button btnSubmit;
                 }
                 if(edtStreetNameText.getText().toString().isEmpty()){
                     errorToast();
-                    edtStreetName.setError("Enter your street name");
+                    edtStreetNameText.setError("Enter your Street Name");
                 }
                 if(edtStreetNoText.getText().toString().isEmpty()){
                     errorToast();
-                    edtStreetNo.setError("Enter your street number");
+                    edtStreetNoText.setError("Enter your Street Number");
                 }
                 if(edtPostalCodeText.getText().toString().isEmpty()){
                     errorToast();
-                    edtPostalCode.setError("Enter your postal code");
+                    edtPostalCodeText.setError("Enter your Postal Code");
                 }
-//                if(edtCountryText.getText().toString().isEmpty()){
-//                    errorToast();
-//                    edtCountry.setError("Enter your country");
-//                }
-//                if(edtProvinceText.getText().toString().isEmpty()){
-//                    errorToast();
-//                    edtProvince.setError("Enter your province");
-//                }
+                if(edtCountryText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtCountryText.setError("Enter your country");
+                }
+                if(edtProvinceText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtProvinceText.setError("Enter your province");
+                }
                 else {
                     new MaterialAlertDialogBuilder(MainActivity.this)
                             .setTitle("CONFIRM COMPLAINT")
