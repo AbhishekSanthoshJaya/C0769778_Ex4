@@ -277,7 +277,7 @@ private Button btnSubmit;
                 spnDesignation.setAdapter(adapter2);
             }
     private void errorToast(){
-        Toast.makeText(MainActivity.this, "Please fill the mandatory fields", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Please fill the mandatory fields", Toast.LENGTH_SHORT).show();
     }
 
     private void clearAll(){
@@ -370,7 +370,7 @@ private Button btnSubmit;
         ArrayList<String> address = new ArrayList<>();
         address.add(edtStreetNoText.getText().toString());
         address.add(edtStreetNameText.getText().toString());
-        address.add(edtProvinceText.getText().toString());
+        address.add(edtCountryText.getText().toString());
         address.add(edtPostalCodeText.getText().toString());
         return address;
     }
