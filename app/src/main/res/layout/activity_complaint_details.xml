@@ -14,25 +14,31 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="308dp"
+            android:layout_marginEnd="300dp"
+            android:layout_marginBottom="600dp"
             android:text="Designation"
             android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView19"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="383dp"
-            android:layout_marginEnd="19dp"
+            android:layout_marginEnd="300dp"
+            android:layout_marginBottom="525dp"
             android:text="Number"
             android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintEnd_toStartOf="@+id/txtCompNumber"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -92,7 +98,7 @@
             android:layout_marginBottom="673dp"
             android:text="TextView"
             android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,20 +106,23 @@
 
         <TextView
             android:id="@+id/txtCompDesignation"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="70dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="308dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="601dp"
             android:text="TextView"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCompIssues" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="80dp"
@@ -128,7 +137,7 @@
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="155dp"
@@ -143,11 +152,12 @@
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="224dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="226dp"
             android:layout_marginEnd="306dp"
-            android:layout_marginBottom="676dp"
+            android:layout_marginBottom="674dp"
             android:text="Issues"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -157,44 +167,51 @@
 
         <TextView
             android:id="@+id/txtCompNumber"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="49dp"
-            android:layout_marginEnd="208dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="386dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="525dp"
             android:text="TextView"
             android:textColor="@color/colorPrimary"
             android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView19"
-            app:layout_constraintTop_toBottomOf="@+id/txtCompDesignation" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView21"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="453dp"
-            android:layout_marginEnd="18dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="455dp"
+            android:layout_marginEnd="300dp"
+            android:layout_marginBottom="465dp"
             android:text="Postal Code"
             android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintEnd_toStartOf="@+id/txtCompPostal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtCompPostal"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="208dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="449dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="462dp"
             android:text="TextView"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView21"
-            app:layout_constraintTop_toBottomOf="@+id/txtCompNumber" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
