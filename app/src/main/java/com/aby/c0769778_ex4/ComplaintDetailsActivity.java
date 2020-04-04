@@ -9,7 +9,7 @@ import com.aby.c0769778_ex4.model.Complaints;
 
 import butterknife.ButterKnife;
 
-public class ComplaintDetails extends AppCompatActivity {
+public class ComplaintDetailsActivity extends AppCompatActivity {
 
     Complaints cd;
     private TextView txtCompName;

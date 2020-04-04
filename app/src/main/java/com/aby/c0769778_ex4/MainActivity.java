@@ -1,7 +1,6 @@
 package com.aby.c0769778_ex4;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 
 import android.app.DatePickerDialog;
@@ -145,6 +144,26 @@ private Button btnSubmit;
                     errorToast();
                     edtIssueDetails.setError("Enter your issue");
                 }
+                if(edtStreetNameText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtStreetName.setError("Enter your street name");
+                }
+                if(edtStreetNoText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtStreetNo.setError("Enter your street number");
+                }
+                if(edtPostalCodeText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtPostalCode.setError("Enter your postal code");
+                }
+                if(edtCountryText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtCountry.setError("Enter your country");
+                }
+                if(edtProvinceText.getText().toString().isEmpty()){
+                    errorToast();
+                    edtProvince.setError("Enter your province");
+                }
                 else {
                     new MaterialAlertDialogBuilder(MainActivity.this)
                             .setTitle("CONFIRM COMPLAINT")
@@ -154,7 +173,7 @@ private Button btnSubmit;
                                 public void onClick(DialogInterface dialog, int which) {
                                     String designation = spnDesignation.getSelectedItem().toString();
                                     Complaints complaintDetails = new Complaints(edtFirstNameText.getText().toString(), edtLastNameText.getText().toString(), edtIssueDetails.getText().toString(), designation, DisplayDate.getText().toString(),edtNumberText.getText().toString(), edtPostalCodeText.getText().toString());
-                                    Intent complaintIntent = new Intent(MainActivity.this, ComplaintDetails.class);
+                                    Intent complaintIntent = new Intent(MainActivity.this, ComplaintDetailsActivity.class);
                                     Bundle bundle = new Bundle();
                                     bundle.putSerializable("complaintKey",complaintDetails);
                                     complaintIntent.putExtras(bundle);
