@@ -153,7 +153,7 @@ private Button btnSubmit;
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     String designation = spnDesignation.getSelectedItem().toString();
-                                    Complaints complaintDetails = new Complaints(edtFirstNameText.getText().toString(), edtLastNameText.getText().toString(), edtIssueDetails.getText().toString(), designation, DisplayDate.getText().toString(),edtNumberText.getText().toString());
+                                    Complaints complaintDetails = new Complaints(edtFirstNameText.getText().toString(), edtLastNameText.getText().toString(), edtIssueDetails.getText().toString(), designation, DisplayDate.getText().toString(),edtNumberText.getText().toString(), edtPostalCodeText.getText().toString());
                                     Intent complaintIntent = new Intent(MainActivity.this, ComplaintDetails.class);
                                     Bundle bundle = new Bundle();
                                     bundle.putSerializable("complaintKey",complaintDetails);

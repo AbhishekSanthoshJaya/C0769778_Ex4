@@ -12,18 +12,24 @@ public class Complaints implements Serializable {
     private String designation;
     private String issueDate;
     private String number;
+    private String postalCode;
 
-    public Complaints(String firstName, String lastName, String complaintDescription, String designation, String issueDate, String number){
+    public Complaints(String firstName, String lastName, String complaintDescription, String designation, String issueDate, String number, String postalCode){
         this.firstName = firstName;
         this.lastName = lastName;
         this.complaintDescription = complaintDescription;
         this.designation = designation;
         this.issueDate = issueDate;
         this.number = number;
+        this.postalCode = postalCode;
     }
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
     }
 
     public void setFirstName(String firstName) {
