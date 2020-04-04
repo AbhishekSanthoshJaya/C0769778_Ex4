@@ -21,6 +21,7 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
     private TextView txtCompDesignation;
     private TextView txtCompNumber;
     private TextView txtCompPostal;
+    private TextView txtCompDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
         txtCompDesignation = findViewById(R.id.txtCompDesignation);
         txtCompNumber = findViewById(R.id.txtCompNumber);
         txtCompPostal = findViewById(R.id.txtCompPostal);
+        txtCompDescription = findViewById(R.id.txtCompDescription);
+
 
         if(getIntent().getExtras()  != null) {
             cd = (Complaints) getIntent().getExtras().getSerializable("complaintKey");
@@ -59,6 +62,7 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
             txtCompDesignation.setText(cd.getDesignation());
             txtCompNumber.setText(cd.getNumber());
             txtCompPostal.setText(addressString);
+            txtCompDescription.setText(cd.getDescription());
 
         }
     }

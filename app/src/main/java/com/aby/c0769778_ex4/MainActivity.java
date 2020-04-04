@@ -180,7 +180,9 @@ private Button btnSubmit;
                                             DisplayDate.getText().toString(),
                                             edtNumberText.getText().toString(),
                                             edtPostalCodeText.getText().toString(),
-                                            getAddress());
+                                            getAddress(),
+                                            edtIssueDetails.getText().toString()
+                                            );
                                     Intent complaintIntent = new Intent(MainActivity.this, ComplaintDetailsActivity.class);
                                     Bundle bundle = new Bundle();
                                     bundle.putSerializable("complaintKey",complaintDetails);

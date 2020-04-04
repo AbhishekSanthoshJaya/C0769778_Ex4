@@ -17,8 +17,7 @@ public class Complaints implements Serializable {
     private String number;
     private ArrayList address;
     private String postalCode;
-
-
+    private String description;
 
     public Complaints(String firstName,
                       String lastName,
@@ -27,7 +26,8 @@ public class Complaints implements Serializable {
                       String issueDate,
                       String number,
                       String postalCode,
-    ArrayList address){
+    ArrayList address,
+                      String description){
         this.firstName = firstName;
         this.lastName = lastName;
         this.allIssues = allIssues;
@@ -36,6 +36,11 @@ public class Complaints implements Serializable {
         this.number = number;
         this.address = address;
         this.postalCode = postalCode;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public ArrayList getAddress() {
