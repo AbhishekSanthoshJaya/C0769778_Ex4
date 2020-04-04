@@ -40,11 +40,25 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
             cd = (Complaints) getIntent().getExtras().getSerializable("complaintKey");
             txtCompName.setText(cd.getFirstName());
             txtCompLastName.setText(cd.getLastName());
-            txtCompIssues.setText(cd.getAllIssues().toString());
+
+            //Replacing contents of Arraylist as strings
+            String issueListString = cd.getAllIssues().toString();
+            issueListString = issueListString.replace("[", "")
+                    .replace("]", "")
+                    .replace(" ", "")
+                    .replace(",", ", ");
+
+            String addressString = cd.getAddress().toString();
+            addressString = addressString.replace("[", "")
+                    .replace("]", "")
+                    .replace(" ", "")
+                    .replace(",", ", ");
+
+            txtCompIssues.setText(issueListString);
             //txtCompDate.setText(cd.getIssueDate());
             txtCompDesignation.setText(cd.getDesignation());
             txtCompNumber.setText(cd.getNumber());
-            txtCompPostal.setText(cd.getAddress().toString());
+            txtCompPostal.setText(addressString);
 
         }
     }
