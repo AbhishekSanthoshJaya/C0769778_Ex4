@@ -62,7 +62,7 @@ private TextInputEditText edtCountryText;
 private TextInputLayout edtNumber;
 private TextInputEditText edtNumberText;
 
-private EditText  edtIssueDetails;
+private EditText edtIssueDetails;
 private CheckBox chkNetwork;
 private CheckBox chkPerformance;
 private CheckBox chkOther;
@@ -156,14 +156,14 @@ private Button btnSubmit;
                     errorToast();
                     edtPostalCode.setError("Enter your postal code");
                 }
-                if(edtCountryText.getText().toString().isEmpty()){
-                    errorToast();
-                    edtCountry.setError("Enter your country");
-                }
-                if(edtProvinceText.getText().toString().isEmpty()){
-                    errorToast();
-                    edtProvince.setError("Enter your province");
-                }
+//                if(edtCountryText.getText().toString().isEmpty()){
+//                    errorToast();
+//                    edtCountry.setError("Enter your country");
+//                }
+//                if(edtProvinceText.getText().toString().isEmpty()){
+//                    errorToast();
+//                    edtProvince.setError("Enter your province");
+//                }
                 else {
                     new MaterialAlertDialogBuilder(MainActivity.this)
                             .setTitle("CONFIRM COMPLAINT")
