@@ -63,7 +63,6 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
             txtCompNumber.setText(cd.getNumber());
             txtCompPostal.setText(addressString);
             txtCompDescription.setText(cd.getDescription());
-
         }
     }
 }

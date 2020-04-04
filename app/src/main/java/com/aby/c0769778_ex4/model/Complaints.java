@@ -26,8 +26,9 @@ public class Complaints implements Serializable {
                       String issueDate,
                       String number,
                       String postalCode,
-    ArrayList address,
-                      String description){
+                      ArrayList address,
+                      String description)
+    {
         this.firstName = firstName;
         this.lastName = lastName;
         this.allIssues = allIssues;

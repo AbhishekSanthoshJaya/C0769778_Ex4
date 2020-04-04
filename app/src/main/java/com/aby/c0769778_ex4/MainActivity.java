@@ -165,6 +165,19 @@ private Button btnSubmit;
                     errorToast();
                     edtProvinceText.setError("Enter your province");
                 }
+                if(!validateMobile(edtNumberText.getText().toString())){
+                    new MaterialAlertDialogBuilder(MainActivity.this)
+                            .setTitle("Error in form")
+                            .setMessage("Please enter a valid mobile number")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
+                    .show();
+                edtNumberText.setError("Enter valid number");
+                }
                 else {
                     new MaterialAlertDialogBuilder(MainActivity.this)
                             .setTitle("CONFIRM COMPLAINT")
@@ -360,6 +373,12 @@ private Button btnSubmit;
         address.add(edtProvinceText.getText().toString());
         address.add(edtPostalCodeText.getText().toString());
         return address;
+    }
+    private boolean validateMobile(String number){
+        if (edtNumberText.getText().length() == 10){
+            return true;
+        }
+        return false;
     }
 }
 
