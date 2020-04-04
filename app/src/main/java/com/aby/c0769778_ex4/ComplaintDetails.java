@@ -32,7 +32,6 @@ public class ComplaintDetails extends AppCompatActivity {
 
         if(getIntent().getExtras()  != null) {
             cd = (Complaints) getIntent().getExtras().getSerializable("complaintKey");
-           //Toast.makeText(this, cd.toString(), Toast.LENGTH_LONG).show();
             txtCompName.setText(cd.getFirstName());
             txtCompLastName.setText(cd.getLastName());
             txtCompDescription.setText(cd.getComplaintDescription());
