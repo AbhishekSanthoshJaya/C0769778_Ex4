@@ -11,13 +11,15 @@ public class Complaints implements Serializable {
     private String complaintDescription;
     private String designation;
     private String issueDate;
+    private String number;
 
-    public Complaints(String firstName, String lastName, String complaintDescription, String designation, String issueDate){
+    public Complaints(String firstName, String lastName, String complaintDescription, String designation, String issueDate, String number){
         this.firstName = firstName;
         this.lastName = lastName;
         this.complaintDescription = complaintDescription;
         this.designation = designation;
         this.issueDate = issueDate;
+        this.number = number;
     }
 
     public String getFirstName() {
@@ -58,6 +60,10 @@ public class Complaints implements Serializable {
 
     public void setIssueDate(String issueDate) {
         this.issueDate = issueDate;
+    }
+
+    public String getNumber() {
+        return number;
     }
     @Override
     public String toString() {
