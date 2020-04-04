@@ -31,6 +31,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -172,7 +173,13 @@ private Button btnSubmit;
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     String designation = spnDesignation.getSelectedItem().toString();
-                                    Complaints complaintDetails = new Complaints(edtFirstNameText.getText().toString(), edtLastNameText.getText().toString(), edtIssueDetails.getText().toString(), designation, DisplayDate.getText().toString(),edtNumberText.getText().toString(), edtPostalCodeText.getText().toString());
+                                    Complaints complaintDetails = new Complaints(edtFirstNameText.getText().toString(),
+                                            edtLastNameText.getText().toString(),
+                                            getIssues(),
+                                            designation,
+                                            DisplayDate.getText().toString(),
+                                            edtNumberText.getText().toString(),
+                                            edtPostalCodeText.getText().toString());
                                     Intent complaintIntent = new Intent(MainActivity.this, ComplaintDetailsActivity.class);
                                     Bundle bundle = new Bundle();
                                     bundle.putSerializable("complaintKey",complaintDetails);
@@ -282,10 +289,16 @@ private Button btnSubmit;
         edtNumber.getEditText().setText("");
 
         //Clearing Previous Errors
-        edtFirstName.setError(null);
-        edtLastName.setError(null);
+        edtFirstNameText.setError(null);
+        edtLastNameText.setError(null);
         edtIssueDetails.setError(null);
-        edtNumber.setError(null);
+        edtNumberText.setError(null);
+        edtCountryText.setError(null);
+        edtStreetNameText.setError(null);
+        edtStreetNoText.setError(null);
+        edtPostalCodeText.setError(null);
+        edtProvinceText.setError(null);
+        edtPostalCodeText.setError(null);
 
         //Clearing Checkbox, Rating bar, Radiobuttons
         chkNetwork.setChecked(false);
@@ -318,6 +331,23 @@ private Button btnSubmit;
                 stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.critical), PorterDuff.Mode.SRC_ATOP);
                 break;
         }
+    }
+
+    private ArrayList<String> getIssues(){
+        ArrayList<String> issueList= new ArrayList<>();
+        if(chkNetwork.isChecked()){
+            issueList.add("Network");
+        }
+        if(chkPerformance.isChecked()){
+            issueList.add("Performance");
+        }
+        if(chkInstallation.isChecked()){
+            issueList.add("Installation");
+        }
+        if(chkOther.isChecked()){
+            issueList.add("Other");
+        }
+        return issueList;
     }
 }
 

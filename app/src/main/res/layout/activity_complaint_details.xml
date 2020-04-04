@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtCompName" />
 
     <TextView
-        android:id="@+id/txtCompDescription"
+        android:id="@+id/txtCompIssues"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
@@ -96,7 +96,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCompDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCompIssues" />
 
     <TextView
         android:id="@+id/textView15"
@@ -126,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
-        android:text="Description"
+        android:text="Issues"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />

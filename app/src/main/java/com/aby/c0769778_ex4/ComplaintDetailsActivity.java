@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.aby.c0769778_ex4.model.Complaints;
 
+import java.util.ArrayList;
+
 import butterknife.ButterKnife;
 
 public class ComplaintDetailsActivity extends AppCompatActivity {
@@ -14,7 +16,7 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
     Complaints cd;
     private TextView txtCompName;
     private TextView txtCompLastName;
-    private TextView txtCompDescription;
+    private TextView txtCompIssues;
     private TextView txtCompDate;
     private TextView txtCompDesignation;
     private TextView txtCompNumber;
@@ -28,7 +30,7 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
 
         txtCompName = findViewById(R.id.txtCompName);
         txtCompLastName = findViewById(R.id.txtCompLastName);
-        txtCompDescription = findViewById(R.id.txtCompDescription);
+        txtCompIssues = findViewById(R.id.txtCompIssues);
         txtCompDate = findViewById(R.id.txtDate);
         txtCompDesignation = findViewById(R.id.txtCompDesignation);
         txtCompNumber = findViewById(R.id.txtCompNumber);
@@ -38,7 +40,7 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
             cd = (Complaints) getIntent().getExtras().getSerializable("complaintKey");
             txtCompName.setText(cd.getFirstName());
             txtCompLastName.setText(cd.getLastName());
-            txtCompDescription.setText(cd.getComplaintDescription());
+            txtCompIssues.setText(cd.getAllIssues().toString());
             //txtCompDate.setText(cd.getIssueDate());
             txtCompDesignation.setText(cd.getDesignation());
             txtCompNumber.setText(cd.getNumber());

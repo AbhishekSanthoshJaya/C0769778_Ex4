@@ -3,25 +3,38 @@ package com.aby.c0769778_ex4.model;
 import android.text.Editable;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Complaints implements Serializable {
 
     private String firstName;
     private String lastName;
+    private ArrayList allIssues;
     private String complaintDescription;
     private String designation;
     private String issueDate;
     private String number;
     private String postalCode;
 
-    public Complaints(String firstName, String lastName, String complaintDescription, String designation, String issueDate, String number, String postalCode){
+
+    public Complaints(String firstName,
+                      String lastName,
+                      ArrayList allIssues,
+                      String designation,
+                      String issueDate,
+                      String number,
+                      String postalCode){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.complaintDescription = complaintDescription;
+        this.allIssues = allIssues;
         this.designation = designation;
         this.issueDate = issueDate;
         this.number = number;
         this.postalCode = postalCode;
+    }
+
+    public ArrayList getAllIssues() {
+        return allIssues;
     }
 
     public String getFirstName() {
