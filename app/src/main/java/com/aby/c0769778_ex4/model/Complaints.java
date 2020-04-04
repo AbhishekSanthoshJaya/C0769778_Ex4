@@ -1,4 +1,4 @@
-package com.aby.c0769778_ex4;
+package com.aby.c0769778_ex4.model;
 
 import android.text.Editable;
 
